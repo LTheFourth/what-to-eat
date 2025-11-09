@@ -7,13 +7,12 @@ The frontend React app is automatically deployed to GitHub Pages using GitHub Ac
 ### Setup:
 1. ✅ Workflow already configured: `.github/workflows/deploy-frontend.yml`
 2. ✅ Triggers on push to `main` branch
-3. ✅ Deploys to: `https://[username].github.io/recipe-app/`
+3. ✅ Deploys to: `https://[username].github.io/what-to-eat/`
 
 ### Required GitHub Secrets:
 - **HUGGINGFACE_API_KEY**: Your Hugging Face API token
 - **API_URL**: Your backend URL (optional, for backend integration)
 
-### Enable GitHub Pages:
 1. Go to repository **Settings** → **Pages**
 2. Set source to **GitHub Actions**
 
@@ -124,7 +123,7 @@ Once your backend is deployed:
 ## 🌐 Final URLs
 
 After deployment:
-- **Frontend**: `https://[username].github.io/recipe-app/`
+- **Frontend**: `https://[username].github.io/what-to-eat/`
 - **Backend**: `https://your-service.railway.app` (or your chosen host)
 
 ---
@@ -143,7 +142,7 @@ NODE_ENV=production
 PORT=8080
 JWT_SECRET=your-jwt-secret
 DATABASE_URL=./database.sqlite
-CORS_ORIGIN=https://[username].github.io
+CORS_ORIGIN=https://[username].github.io/what-to-eat
 ```
 
 ---

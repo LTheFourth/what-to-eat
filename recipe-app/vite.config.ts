@@ -35,7 +35,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/recipe-app/',
+  base: '/what-to-eat/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets'

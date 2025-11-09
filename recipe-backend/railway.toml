@@ -1,4 +1,4 @@
-# Railway Deployment Configuration
+# Railway Serverless Deployment Configuration
 
 [build]
 builder = "NIXPACKS"
@@ -13,9 +13,15 @@ NODE_ENV = "production"
 PORT = "8080"
 
 [[services]]
-name = "recipe-backend"
+name = "recipe-backend-serverless"
 
 [services.variables]
-JWT_SECRET = "your-production-jwt-secret"
 DATABASE_URL = "./database.sqlite"
-CORS_ORIGIN = "https://your-frontend-domain.railway.app"
+CORS_ORIGIN = "https://lthefourth.github.io/recipe-app"
+
+# Serverless configuration
+[services]
+source_dir = "/"
+healthcheck_path = "/health"
+healthcheck_timeout = 100
+healthcheck_interval = 30
